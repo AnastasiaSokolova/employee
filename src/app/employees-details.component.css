@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.details label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.details p {
+    padding: 10px 0;
+}
+
+.details span {
+    font-weight: bold;
+}

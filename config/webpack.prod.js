@@ -17,7 +17,7 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     htmlLoader: {
-        minimize: fals
+        minimize: false
     },
 
     plugins: [

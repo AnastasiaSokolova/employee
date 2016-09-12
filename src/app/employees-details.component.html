@@ -1,0 +1,27 @@
+<div *ngIf="employee" class="details">
+    <p>Information about employee: <span>{{employee.firstname}}  {{employee.lastname}}</span></p>
+    <label>
+        Id: <input type="text" name="id" value = "{{employee.id}}">
+    </label>
+    <label>
+        First name: <input name="firstname"  [(ngModel)]="employee.firstname">
+    </label>
+    <label>
+        Last name: <input name="lastname" [(ngModel)]= "employee.lastname">
+    </label>
+    <label>
+        Age: <input name="age" value = "{{employee.age}}">
+    </label>
+    <label>
+        Position: <input name="position" value = "{{employee.position}}">
+    </label>
+    <label>
+        Skill: <input name="skill" value = "{{employee.skill}}">
+    </label>
+    <label>
+        Language level: <input name="language-level" value = "{{employee.language_level}}">
+    </label>
+    <label>
+        Experience: <input name="experience" value = "{{employee.experience}}">
+    </label>
+</div>
