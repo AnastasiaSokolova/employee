@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Employees } from './employees';
+import {Component, OnInit} from '@angular/core';
+import {Employees} from '../shared/employees';
 
-import { EmployeesService } from './employees.service';
-import { Router } from '@angular/router';
+import {EmployeesService} from '../shared/employees.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'list-emp',
@@ -15,13 +15,13 @@ export class EmployeeListComponent implements OnInit {
     employees: Employees[];
     selectedEmployee: Employees;
 
-    constructor(
-        private employeesService: EmployeesService,
-        private router: Router
-    ) { }
+    constructor(private employeesService: EmployeesService,
+                private router: Router) {
+    }
+
 
     showDetails(employee: Employees): void {
-       this.selectedEmployee = employee;
+        this.router.navigate(['/details', employee.id]);
     }
 
     getEmployees(): void {
@@ -31,9 +31,4 @@ export class EmployeeListComponent implements OnInit {
     ngOnInit(): void {
         this.getEmployees();
     }
-
-    /*gotoDetails(employee: Employees): void {
-        let link = ['/detail', employee.id];
-        this.router.navigate(link);
-    }*/
 }
