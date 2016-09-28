@@ -1,0 +1,31 @@
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(215, 38, 44, 0.9);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content h3 {
+	color: white;
+	text-transform: uppercase;
+}
+
+.content .start-btn {
+	text-decoration: none;
+	border: 2px solid rgba(255,255,255, 0.7);;
+	background: transparent;
+	padding: 5px 10px;
+	color: white;
+	margin-top: 30px;
+	font-size: 20px;
+	font-family: Verdana;
+}
+
+.content .start-btn:hover {
+	background: rgba(255, 255, 255, 0.1);
+}

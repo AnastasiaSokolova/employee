@@ -1,5 +1,6 @@
 <ul class="employee-list">
     <li *ngFor="let employee of employees" (click) = "showDetails(employee)" [class.selectedEmployee]="employee === selectedEmployee">
         {{employee.firstname + ' ' + employee.lastname}}
+        <span>x</span>
     </li>
 </ul>

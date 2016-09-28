@@ -3,8 +3,8 @@ import { Employees } from './employees';
 export const EMPLOYEES: Employees[] = [
     {
         id: 1,
-        firstname: 'Peter',
-        lastname: 'Pen',
+        firstname: 'Jerald',
+        lastname: 'Hardisty',
         age: 23,
         position: 'Junior Software Engineer',
         skill: 'LavaScript',
@@ -13,8 +13,8 @@ export const EMPLOYEES: Employees[] = [
     },
     {
         id: 2,
-        firstname: 'Peter1',
-        lastname: 'Pen1',
+        firstname: 'Rosy',
+        lastname: 'Doolin',
         age: 27,
         position: 'Senior Software Engineer',
         skill: 'Python',
@@ -23,8 +23,8 @@ export const EMPLOYEES: Employees[] = [
     },
     {
         id: 3,
-        firstname: 'Peter2',
-        lastname: 'Pen2',
+        firstname: 'Barry',
+        lastname: 'Hickey',
         age: 43,
         position: 'Software Engineer',
         skill: 'C++',
@@ -33,8 +33,8 @@ export const EMPLOYEES: Employees[] = [
     },
     {
         id: 4,
-        firstname: 'Peter3',
-        lastname: 'Pen3',
+        firstname: 'Hassie',
+        lastname: 'Rosemond',
         age: 33,
         position: 'Testing Engineer',
         skill: 'Smoke Testing',
@@ -43,8 +43,78 @@ export const EMPLOYEES: Employees[] = [
     },
     {
         id: 5,
-        firstname: 'Peter4',
-        lastname: 'Pen4',
+        firstname: 'Whitney',
+        lastname: 'Kimble',
+        age: 19,
+        position: 'Junior Testing Engineer',
+        skill: 'Regression testing',
+        language_level: 'C1',
+        experience: 1
+    },
+     {
+        id: 6,
+        firstname: 'Ida',
+        lastname: 'Dougan',
+        age: 33,
+        position: 'Testing Engineer',
+        skill: 'Smoke Testing',
+        language_level: 'B1+',
+        experience: 5
+    },
+    {
+        id: 7,
+        firstname: 'Euna',
+        lastname: 'Viviani',
+        age: 19,
+        position: 'Junior Testing Engineer',
+        skill: 'Regression testing',
+        language_level: 'C1',
+        experience: 1
+    },
+    {
+        id: 8,
+        firstname: 'Sanjuana',
+        lastname: 'Rosa',
+        age: 33,
+        position: 'Testing Engineer',
+        skill: 'Smoke Testing',
+        language_level: 'B1+',
+        experience: 5
+    },
+    {
+        id: 9,
+        firstname: 'Gerard',
+        lastname: 'Arizmendi',
+        age: 19,
+        position: 'Junior Testing Engineer',
+        skill: 'Regression testing',
+        language_level: 'C1',
+        experience: 1
+    },
+    {
+        id: 10,
+        firstname: 'Else',
+        lastname: 'Ballantine',
+        age: 33,
+        position: 'Testing Engineer',
+        skill: 'Smoke Testing',
+        language_level: 'B1+',
+        experience: 5
+    },
+    {
+        id: 11,
+        firstname: 'Marleen',
+        lastname: 'Buntin',
+        age: 19,
+        position: 'Junior Testing Engineer',
+        skill: 'Regression testing',
+        language_level: 'C1',
+        experience: 1
+    },
+    {
+        id: 12,
+        firstname: 'Julianne',
+        lastname: 'Lippard',
         age: 19,
         position: 'Junior Testing Engineer',
         skill: 'Regression testing',
