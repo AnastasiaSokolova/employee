@@ -14,6 +14,7 @@ import {Router} from '@angular/router';
 export class EmployeeListComponent implements OnInit {
     employees: Employees[];
     selectedEmployee: Employees;
+    //mode = 'Observable';
 
     constructor(private employeesService: EmployeesService,
                 private router: Router) {
@@ -25,7 +26,21 @@ export class EmployeeListComponent implements OnInit {
     }
 
     getEmployees(): void {
+
+        //this.employeesService.getEmployees().then(employees => this.employees = employees);
         this.employeesService.getEmployees().then(employees => this.employees = employees);
+    }
+
+    showMsg(res: any) {
+        if(res.status == 200) {
+            console.log(res.msg);
+            this.getEmployees();
+        }
+    }
+
+    deleteEmployee(id: String) : void {
+        console.log(id)
+        this.employeesService.deleteEmployee(id).then(res => this.showMsg(res));
     }
 
     ngOnInit(): void {

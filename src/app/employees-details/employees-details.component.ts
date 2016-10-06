@@ -15,10 +15,14 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class EmployeesDetailsComponent implements OnInit {
     @Input()
     employee: Employees;
+   
+    //mode = 'Observable';
+
     constructor(
         private route: ActivatedRoute,
         private router: Router,
         private service: EmployeesService) {}
+    
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
           let id = +params['id']; 
@@ -26,3 +30,4 @@ export class EmployeesDetailsComponent implements OnInit {
         });
     }
 }
+ 

@@ -1,6 +1,8 @@
 <ul class="employee-list">
-    <li *ngFor="let employee of employees" (click) = "showDetails(employee)" [class.selectedEmployee]="employee === selectedEmployee">
-        {{employee.firstname + ' ' + employee.lastname}}
-        <span>x</span>
+    <li *ngFor="let employee of employees"  [class.selectedEmployee]="employee === selectedEmployee">
+        <div (click) = "showDetails(employee)">{{employee.firstname + ' ' + employee.lastname}}</div>
+        <span class = "delete" (click) = "deleteEmployee(employee.id)">x</span>
     </li>
 </ul>
+
+<!--  <li *ngFor="let employee of employees" (click) = "showDetails(employee)" [class.selectedEmployee]="employee ===  -->

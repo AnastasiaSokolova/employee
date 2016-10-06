@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employees-list/employees-list.component';
 import { EmployeesDetailsComponent } from './employees-details/employees-details.component';
 import { EmployeesStartPage } from './employees-startpage/employees-startpage.component';
+import { HttpModule } from '@angular/http'
 
 import { routing } from './app.routing';
 
@@ -14,6 +15,7 @@ import { routing } from './app.routing';
     imports: [
         BrowserModule,
         FormsModule,
+        HttpModule,
         routing
     ],
     declarations: [
