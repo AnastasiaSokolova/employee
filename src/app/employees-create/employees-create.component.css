@@ -1,5 +1,6 @@
-.details {
+.create {
 	width: 320px;
+
 }
 
 p {
@@ -42,16 +43,4 @@ button:hover, a:hover {
 a {
 	margin-left: 10px;
 	padding: 4px 9px;
-}
-
-.ng-valid[required], .ng-valid.required  {
-  border-left: 2px solid #42A948; 
-}
-
-.ng-invalid:not(form)  {
-  border-left: 2px solid #a94442; 
-}
-
-.error {
-	color: red;
 }

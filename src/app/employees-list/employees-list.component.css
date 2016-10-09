@@ -13,7 +13,7 @@
 }
 
 .employee-list li div{
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
 }
 
 
@@ -24,15 +24,15 @@
 }
 
 .employee-list li:hover .delete{
-    color: black;
+    color: white;
 }
 
 
 .employee-list li .delete {
     cursor: pointer;
     position: absolute;
-    right: -10px;
-    bottom:20px;
+    right: 5px;
+    top: 0;
 }
 
 

@@ -4,31 +4,21 @@ import { EmployeesService } from '../shared/employees.service';
 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-
 @Component({
-    selector: 'e-detail',
-    templateUrl: './employees-details.component.html',
-    styleUrls: ['./employees-details.component.css'],
+	selector: 'e-create',
+    templateUrl: './employees-create.component.html',
+    styleUrls: ['./employees-create.component.css'],
     providers: [EmployeesService]
 })
 
-export class EmployeesDetailsComponent implements OnInit {
-    @Input() employee: Employees;
-   
-
-    constructor(
+export class EmployeesCreate {
+	constructor(
         private route: ActivatedRoute,
         private router: Router,
         private service: EmployeesService) {}
     
-    ngOnInit() {
-        this.route.params.forEach((params: Params) => {
-          let id = +params['id']; 
-          this.service.getEmployee(id).then(employee => this.employee = employee);
-        });
-    }
-    onSubmit(form: any): void {
-       let data:  Employees = {
+    onSubmit(form: any) {
+    	let data:  Employees = {
                 id: form.value.id,
                 firstname: form.value.firstname,
                 lastname: form.value.lastname,
@@ -38,7 +28,7 @@ export class EmployeesDetailsComponent implements OnInit {
                 language_level: form.value.language_level,
                 experience: form.value.experience
         };
-        this.service.editEmployee(data).then(res =>  this.router.navigateByUrl('/employees'));
+        this.service.AddEmployee(data).then(res =>  this.router.navigateByUrl('/employees'));
+        // employees  => this.employees.push(employee),
     }
 }
- 

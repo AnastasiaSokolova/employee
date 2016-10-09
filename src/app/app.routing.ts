@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmployeeListComponent } from './employees-list/employees-list.component';
 import { EmployeesDetailsComponent } from './employees-details/employees-details.component';
 import { EmployeesStartPage } from './employees-startpage/employees-startpage.component';
+import { EmployeesCreate } from './employees-create/employees-create.component';
 
 const appRoutes: Routes = [
     {
@@ -22,6 +23,10 @@ const appRoutes: Routes = [
     {
         path: 'getstarted',
         component: EmployeesStartPage
+    },
+    {
+        path: 'createNew',
+        component: EmployeesCreate
     }
 
 ];

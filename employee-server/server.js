@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser')
 mongoose = require('mongoose');
 
 
@@ -13,6 +14,13 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "DELETE, GET, PUT, POST");
   next();
 });
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+//app.use(bodyParser.json({ type: 'application/vnd.api+json' }))
 
 
 

@@ -152,7 +152,25 @@ exports.delete = function(req, res){
     });
 };
 
+exports.update = function(req, res) {
+    Employee.findOne({'id': req.params.id}, function(err, employee) {  
+            employee.firstname = req.body.firstname; 
+            employee.lastname = req.body.lastname; 
+            employee.age = req.body.age; 
+            employee.position = req.body.position; 
+            employee.skill = req.body.skill; 
+            employee.language_level = req.body.language_level; 
+            employee.experience = req.body.experience; 
+            employee.save(function(err) {
+                res.send({ status: 200,  message: 'employee updated!' });
+            });
 
-exports.add = function() {};
-exports.update = function() {};
+        });
+}
 
+exports.add = function(req, res) {
+   var employee = new Employee(req.body);
+   employee.save(function(err) {
+      res.json(employee);
+    });
+};

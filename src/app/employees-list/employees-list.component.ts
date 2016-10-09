@@ -26,8 +26,6 @@ export class EmployeeListComponent implements OnInit {
     }
 
     getEmployees(): void {
-
-        //this.employeesService.getEmployees().then(employees => this.employees = employees);
         this.employeesService.getEmployees().then(employees => this.employees = employees);
     }
 
@@ -40,10 +38,10 @@ export class EmployeeListComponent implements OnInit {
 
     deleteEmployee(id: String) : void {
         console.log(id)
-        this.employeesService.deleteEmployee(id).then(res => this.showMsg(res));
+        this.employeesService.deleteEmployee(id).then(res => this.showMsg(res));//change this
     }
 
     ngOnInit(): void {
-        this.getEmployees();
+        this.getEmployees();//don`t need
     }
 }
