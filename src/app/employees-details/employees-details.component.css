@@ -55,3 +55,7 @@ a {
 .error {
 	color: red;
 }
+
+button[disabled] {
+	background: grey;
+}
