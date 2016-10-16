@@ -1,10 +1,43 @@
 <div class="createNew">
-	<a routerLink="/createNew">Add new</a>
+	<a routerLink="/createNew" pButton label="Add new"></a>
 </div>
+
+
+
+<p-dataTable [value]="employees" sortMode="multiple" selectionMode="single" [(selection)]="selectedEmployee"  [rows]="10" [paginator]="true">
+  <header>Employees List</header>
+ <footer><div>Employee: {{selectedEmployee ? selectedEmployee.firstname + ' ' + selectedEmployee.lastname : ''}}</div>
+ 	<div style="text-align: right;">
+ 	<button pButton label="Edit" (click) = "showDetails(selectedEmployee)" [disabled] = !selectedEmployee></button>
+ 	<button pButton label="Delete" (click) = "deleteEmployee(selectedEmployee.id)" [disabled] = !selectedEmployee></button>
+ </div>
+ </footer>
+    <p-column field="firstname" header="Firstname" [sortable]="true"></p-column>
+    <p-column field="lastname" header="Lastname" [sortable]="true"></p-column>
+    <p-column field="age" header="Age" [sortable]="true"></p-column>
+    <p-column field="experience" header="Experience" [sortable]="true"></p-column>
+</p-dataTable>
+
+
+<!--<p-dataList [value]="employees" [paginator]="true" [rows]="10">
+<header>
+        List of Employees
+    </header>
+    <template let-employee>
+        <div class="ui-grid ui-grid-responsive ui-fluid custom" style="cursor:pointer;font-size:16px;border-bottom:1px solid #D5D5D5;">
+            <div class="ui-grid-row">
+                <li  [class.selectedEmployee]="employee === selectedEmployee" (click) = "showDetails(employee)">{{employee.firstname}} {{employee.lastname}}  </li>
+                <span class = "delete" (click) = "deleteEmployee(employee.id)">x</span>
+            </div>
+        </div>
+    </template>
+</p-dataList>
+
+
 <ul class="employee-list">
     <li *ngFor="let employee of employees"  [class.selectedEmployee]="employee === selectedEmployee">
         <div (click) = "showDetails(employee)">{{employee.firstname + ' ' + employee.lastname}}</div>
         <span class = "delete" (click) = "deleteEmployee(employee.id)">x</span>
     </li>
-</ul>
+</ul>-->
 

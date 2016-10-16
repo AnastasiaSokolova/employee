@@ -1,6 +1,7 @@
 .create {
-	width: 320px;
-
+	width: 500px;
+	margin-bottom: 10px;
+	font-family: 'Lato', sans-serif;
 }
 
 p {
@@ -12,35 +13,54 @@ span {
 }
 
 form {
+	position: relative;
 	margin-left: 10px;
 }
 
 label {
 	position:relative;
 	width: 100%;
-	margin-bottom: 10px;
+	line-height: 24px;
 }
+
 input {
+	width: 100%;
+	padding: 5px;
+}
+
+button {
+	cursor: pointer;
 	position: absolute;
-	right: 0;
-}
-
-button, a {
-	text-decoration: none;
-	border: 2px solid rgba(215, 38, 44, 0.7);
-	background: rgba(215, 38, 44, 0.9);
-	color: white;
-	width: 100px;
-	margin-bottom: 10px;
-	font-size: 14px;
-	font-family: Verdana;
-}
-
-button:hover, a:hover {
-	background: rgba(215, 38, 44, 0.7);
+    right: -14px;
+    bottom: -60px;
 }
 
 a {
+	margin-top: 20px;
 	margin-left: 10px;
+	text-decoration: none;
+}
+
+a, button {
+	border-radius: 0;
 	padding: 4px 9px;
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+input.ng-valid {
+  border-left: 4px solid #42A948; 
+}
+
+.ng-invalid:not(form)  {
+  border-left: 4px solid #a94442; 
+}
+
+.error-msg {
+    background: pink;
+    padding: 5px;
+    width: 496px;
+    color: crimson;
+    font-family: 'Lato', sans-serif;
 }

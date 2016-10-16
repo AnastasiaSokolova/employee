@@ -14,7 +14,9 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 export class EmployeesDetailsComponent implements OnInit {
     @Input() employee: Employees;
-   
+    pat: String = '^(A|B|C)(1|2)\+?$';
+  
+
 
     constructor(
         private route: ActivatedRoute,

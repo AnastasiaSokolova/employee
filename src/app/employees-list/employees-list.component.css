@@ -1,41 +1,22 @@
-.employee-list {
-    list-style: none;
-    width: 300px;
-    padding: 0;
-    margin: 0;
+a {
+    margin: 20px 0;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 4px 9px;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
-.employee-list li {
+header {
     padding: 10px;
-    cursor: pointer;
-    border-bottom: 2px solid #ccc;
-    position: relative;
+    text-transform: uppercase;
 }
 
-.employee-list li div{
-    padding: 10px 20px 10px 10px;
+footer div:first-child {
+    width: 40%;
+    float: left;
+    line-height: 30px;
+    text-align: left;
 }
 
-
-
-.employee-list li:hover {
-    color: white;
-    background: rgba(215, 38, 44, 0.9);
-}
-
-.employee-list li:hover .delete{
-    color: white;
-}
-
-
-.employee-list li .delete {
-    cursor: pointer;
-    position: absolute;
-    right: 5px;
-    top: 0;
-}
-
-
-.employee-list .selectedEmployee {
-    color: red;
-}

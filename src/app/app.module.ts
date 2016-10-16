@@ -7,7 +7,12 @@ import { EmployeeListComponent } from './employees-list/employees-list.component
 import { EmployeesDetailsComponent } from './employees-details/employees-details.component';
 import { EmployeesStartPage } from './employees-startpage/employees-startpage.component';
 import { EmployeesCreate } from './employees-create/employees-create.component';
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
+import { ButtonModule } from 'primeng/primeng';
+import { InputTextModule } from 'primeng/primeng';
+import { DataListModule } from 'primeng/primeng';
+import { DataTableModule, SharedModule } from 'primeng/primeng';
+
 
 import { routing } from './app.routing';
 
@@ -17,6 +22,11 @@ import { routing } from './app.routing';
         BrowserModule,
         FormsModule,
         HttpModule,
+        ButtonModule,
+        InputTextModule,
+        DataListModule,
+        DataTableModule,
+        SharedModule,
         routing
     ],
     declarations: [

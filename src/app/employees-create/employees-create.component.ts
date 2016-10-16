@@ -12,13 +12,27 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 
 export class EmployeesCreate {
+   
+    employee = new Employees();
+    //
+    /*employee: Employees = {
+    id: null,
+    firstname:'',
+    lastname: '',
+    age: null,
+    position: '',
+    skill: '',
+    language_level: '',
+    experience: null
+   }*/
+
 	constructor(
         private route: ActivatedRoute,
         private router: Router,
         private service: EmployeesService) {}
     
     onSubmit(form: any) {
-    	let data:  Employees = {
+    	let data: Employees =  this.employee;/* Employees = {
                 id: form.value.id,
                 firstname: form.value.firstname,
                 lastname: form.value.lastname,
@@ -27,7 +41,7 @@ export class EmployeesCreate {
                 skill: form.value.skill,
                 language_level: form.value.language_level,
                 experience: form.value.experience
-        };
+        };*/
         this.service.AddEmployee(data).then(res =>  this.router.navigateByUrl('/employees'));
         // employees  => this.employees.push(employee),
     }
