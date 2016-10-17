@@ -17,27 +17,3 @@
     <p-column field="age" header="Age" [sortable]="true"></p-column>
     <p-column field="experience" header="Experience" [sortable]="true"></p-column>
 </p-dataTable>
-
-
-<!--<p-dataList [value]="employees" [paginator]="true" [rows]="10">
-<header>
-        List of Employees
-    </header>
-    <template let-employee>
-        <div class="ui-grid ui-grid-responsive ui-fluid custom" style="cursor:pointer;font-size:16px;border-bottom:1px solid #D5D5D5;">
-            <div class="ui-grid-row">
-                <li  [class.selectedEmployee]="employee === selectedEmployee" (click) = "showDetails(employee)">{{employee.firstname}} {{employee.lastname}}  </li>
-                <span class = "delete" (click) = "deleteEmployee(employee.id)">x</span>
-            </div>
-        </div>
-    </template>
-</p-dataList>
-
-
-<ul class="employee-list">
-    <li *ngFor="let employee of employees"  [class.selectedEmployee]="employee === selectedEmployee">
-        <div (click) = "showDetails(employee)">{{employee.firstname + ' ' + employee.lastname}}</div>
-        <span class = "delete" (click) = "deleteEmployee(employee.id)">x</span>
-    </li>
-</ul>-->
-

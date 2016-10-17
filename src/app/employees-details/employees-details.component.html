@@ -1,6 +1,6 @@
 <div *ngIf="employee" class="details">
     <p>Information about employee: <span>{{employee.firstname}}  {{employee.lastname}}</span></p>
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" autocomplete="off">
+    <form #f="ngForm" (ngSubmit)="onSubmit()" autocomplete="off">
     <label>
         Id: <input type="text" name="id" [(ngModel)] = "employee.id" readonly>
     </label>
@@ -8,7 +8,7 @@
         First name: <input name="firstname"  [(ngModel)]="employee.firstname" #firstname='ngModel' pattern="[a-zA-Z ]{3,16}">
          <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)">
             <div [hidden]="!firstname.errors.pattern" class="error-msg">
-              Firsame is obligatory and should consist of letters 3..16
+              Firstname is obligatory and should consist of letters 3..16
             </div>
         </div>
     </label>
@@ -30,7 +30,7 @@
     </label>
     <label>
         Position: <input name="position" [(ngModel)] = "employee.position" #position='ngModel' pattern="[a-zA-Z ]{3,30}">
-        <div *ngIf="position.errors && (age.dirty || position.touched)">
+        <div *ngIf="position.errors && (position.dirty || position.touched)">
             <div [hidden]="!position.errors.pattern" class="error-msg">
               Age is required and should consist of only letters 3..30
             </div>
@@ -38,7 +38,7 @@
     </label>
     <label>
         Skill: <input name="skill" [(ngModel)] = "employee.skill" #skill='ngModel' pattern="[a-zA-Z ]{3,30}">
-         <div *ngIf="skill.errors && (age.dirty || skill.touched)">
+         <div *ngIf="skill.errors && (skill.dirty || skill.touched)">
             <div [hidden]="!skill.errors.pattern" class="error-msg">
               Skill is required and should consist of only letters 3..30
             </div>
@@ -46,7 +46,7 @@
     </label>
     <label>
         Language level: <input name="language_level" [(ngModel)] = "employee.language_level" #language_level='ngModel' pattern='(A|B|C)(1|2)\+?'>
-        <div *ngIf="language_level.errors && (age.dirty || language_level.touched)">
+        <div *ngIf="language_level.errors && (language_level.dirty || language_level.touched)">
             <div [hidden]="!language_level.errors.pattern" class="error-msg">
               Language level is required and should be in format like B1? A2+ etc.
             </div>
@@ -54,7 +54,7 @@
     </label>
     <label>
         Experience: <input name="experience" [(ngModel)] = "employee.experience" #experience='ngModel' pattern="[0-9 ]+">
-         <div *ngIf="experience.errors && (age.dirty || experience.touched)">
+         <div *ngIf="experience.errors && (experience.dirty || experience.touched)">
             <div [hidden]="!experience.errors.pattern" class="error-msg">
               Experience is required and should consist of only a numbers
             </div>

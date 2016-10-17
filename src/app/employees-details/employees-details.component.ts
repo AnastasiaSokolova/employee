@@ -14,10 +14,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 export class EmployeesDetailsComponent implements OnInit {
     @Input() employee: Employees;
-    pat: String = '^(A|B|C)(1|2)\+?$';
-  
-
-
+    
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -29,18 +26,8 @@ export class EmployeesDetailsComponent implements OnInit {
           this.service.getEmployee(id).then(employee => this.employee = employee);
         });
     }
-    onSubmit(form: any): void {
-       let data:  Employees = {
-                id: form.value.id,
-                firstname: form.value.firstname,
-                lastname: form.value.lastname,
-                age: form.value.age,
-                position: form.value.position,
-                skill: form.value.skill,
-                language_level: form.value.language_level,
-                experience: form.value.experience
-        };
-        this.service.editEmployee(data).then(res =>  this.router.navigateByUrl('/employees'));
+    onSubmit(): void {
+        this.service.editEmployee(this.employee).then(res =>  this.router.navigateByUrl('/employees'));
     }
 }
  

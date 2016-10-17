@@ -8,12 +8,8 @@ import { EmployeesDetailsComponent } from './employees-details/employees-details
 import { EmployeesStartPage } from './employees-startpage/employees-startpage.component';
 import { EmployeesCreate } from './employees-create/employees-create.component';
 import { HttpModule } from '@angular/http';
-import { ButtonModule } from 'primeng/primeng';
-import { InputTextModule } from 'primeng/primeng';
-import { DataListModule } from 'primeng/primeng';
-import { DataTableModule, SharedModule } from 'primeng/primeng';
 
-
+import { ButtonModule, InputTextModule, DataListModule, DataTableModule, SharedModule } from 'primeng/primeng';
 import { routing } from './app.routing';
 
 

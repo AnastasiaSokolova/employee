@@ -14,11 +14,10 @@ import {Router} from '@angular/router';
 export class EmployeeListComponent implements OnInit {
     employees: Employees[];
     selectedEmployee: Employees;
-    //mode = 'Observable';
+  
 
     constructor(private employeesService: EmployeesService,
-                private router: Router) {
-    }
+                private router: Router) {}
 
 
     showDetails(employee: Employees): void {
@@ -29,19 +28,11 @@ export class EmployeeListComponent implements OnInit {
         this.employeesService.getEmployees().then(employees => this.employees = employees);
     }
 
-    showMsg(res: any) {
-        if(res.status == 200) {
-            console.log(res.msg);
-            this.getEmployees();
-        }
-    }
-
     deleteEmployee(id: String) : void {
-        console.log(id)
-        this.employeesService.deleteEmployee(id).then(res => this.showMsg(res));//change this
+        this.employeesService.deleteEmployee(id).then(() => this.getEmployees());
     }
 
     ngOnInit(): void {
-        this.getEmployees();//don`t need
+        this.getEmployees();
     }
 }

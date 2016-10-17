@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 
-//import { EMPLOYEES } from './mock-employees';
+
 import { Employees } from './employees';
-//import { Observable } from 'rxjs/observable';
 
 @Injectable()
 export class EmployeesService {
 
  
-
     constructor (private http: Http) {}
      
     private extractData(res: Response) {
