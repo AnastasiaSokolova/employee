@@ -2,9 +2,6 @@
     <p>Welcome <span>{{employee.firstname}}  </span></p>
     <form #f="ngForm" (ngSubmit)="onSubmit()" autocomplete="off">
     <label>
-        Id: <input type="text" name="id" [(ngModel)] = "employee.id">
-    </label>
-    <label>
         First name: <input name="firstname"  [(ngModel)]="employee.firstname" #firstname='ngModel' required pattern="[a-zA-Z ]{3,16}" pTooltip="This field is required" tooltipPosition="right">
          <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)">
             <div [hidden]="!firstname.errors.pattern" class="error-msg">
@@ -63,5 +60,7 @@
     <button type="submit" pButton label="Add" [disabled]="!f.valid"></button>
     </form>
 </div>
+
+<button (click)="clickme()">lol</button>
 
 <a routerLink="/employees" pButton label="Back to list"></a>

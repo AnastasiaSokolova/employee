@@ -4,7 +4,7 @@ Schema = mongoose.Schema;
 
 
 var EmployeeSchema = new Schema({
-    id: Number,
+    id: String,
     firstname: String, 
     lastname: String, 
     age: Number,

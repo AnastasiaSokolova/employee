@@ -22,7 +22,7 @@ export class EmployeesService {
        return this.http.get('http://localhost:8000/employees').toPromise().then(this.extractData)
     }
 
-    getEmployee(id: number): Promise<Employees> {
+    getEmployee(id: String): Promise<Employees> {
         return this.http.get('http://localhost:8000/details/'+ id).toPromise().then(this.extractData)
     }
     deleteEmployee(id: String):  Promise<Employees[]> {

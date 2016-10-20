@@ -22,7 +22,7 @@ export class EmployeesDetailsComponent implements OnInit {
     
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
-          let id = +params['id']; 
+          let id = params['id']; 
           this.service.getEmployee(id).then(employee => this.employee = employee);
         });
     }
