@@ -9,7 +9,7 @@ import { EmployeesStartPage } from './employees-startpage/employees-startpage.co
 import { EmployeesCreate } from './employees-create/employees-create.component';
 import { HttpModule } from '@angular/http';
 
-import { ButtonModule, InputTextModule, DataListModule, DataTableModule, SharedModule } from 'primeng/primeng';
+import { ButtonModule, InputTextModule, DataListModule, DataTableModule, SharedModule, TooltipModule } from 'primeng/primeng';
 import { routing } from './app.routing';
 
 
@@ -23,6 +23,7 @@ import { routing } from './app.routing';
         DataListModule,
         DataTableModule,
         SharedModule,
+        TooltipModule,
         routing
     ],
     declarations: [
