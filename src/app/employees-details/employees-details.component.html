@@ -18,7 +18,7 @@
         </div>
     </label>
     <label>
-        Age: <input name="age" [(ngModel)] = "employee.age" #age='ngModel'  pattern="[0-9]+">
+        Age: <input name="age" [(ngModel)] = "employee.age" #age='ngModel' pattern="[0-9]+">
          <div *ngIf="age.errors && (age.dirty || age.touched)">
             <div [hidden]="!age.errors.pattern" class="error-msg">
               Age is required and should consist of only numbers
@@ -50,7 +50,7 @@
         </div>
     </label>
     <label>
-        Experience: <input name="experience" [(ngModel)] = "employee.experience" #experience='ngModel'  pattern="[0-9 ]+">
+        Experience: <input name="experience" [(ngModel)] = "employee.experience" #experience='ngModel'  pattern="[0-9]+">
          <div *ngIf="experience.errors && (experience.dirty || experience.touched)">
             <div [hidden]="!experience.errors.pattern" class="error-msg">
               Experience is required and should consist of only a numbers
@@ -60,5 +60,7 @@
     <button  pButton  type="submit" [disabled]="!f.valid" label="Edit"></button>
     </form>
 </div>
+
+<p-growl [value]="msgs"></p-growl>
 
 <a routerLink="/employees" pButton label="Back to list"></a>

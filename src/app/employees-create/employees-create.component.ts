@@ -4,6 +4,9 @@ import { EmployeesService } from '../shared/employees.service';
 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+import {Message} from 'primeng/primeng';
+
+
 @Component({
 	selector: 'e-create',
     templateUrl: './employees-create.component.html',
@@ -14,7 +17,9 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class EmployeesCreate {
    
     employee = new Employees();
-    
+
+    msgs: Message[] = [];
+
     getToken(): string {
         var TokenGenerator = require( 'token-generator' )({
           salt: '3456789',
@@ -31,8 +36,8 @@ export class EmployeesCreate {
         private router: Router,
         private service: EmployeesService) {}
     
-    onSubmit(form: any) {
+    onSubmit() {
         this.employee.id = this.getToken();
-        this.service.AddEmployee(this.employee).then(res =>  this.router.navigateByUrl('/employees'))
+        this.service.AddEmployee(this.employee).then(res =>  this.router.navigateByUrl('/employees'), error =>  this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'}));
     }
 }

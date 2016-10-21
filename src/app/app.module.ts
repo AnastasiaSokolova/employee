@@ -9,8 +9,9 @@ import { EmployeesStartPage } from './employees-startpage/employees-startpage.co
 import { EmployeesCreate } from './employees-create/employees-create.component';
 import { HttpModule } from '@angular/http';
 
-import { ButtonModule, InputTextModule, DataListModule, DataTableModule, SharedModule, TooltipModule } from 'primeng/primeng';
+import { ButtonModule, InputTextModule, DataListModule, DataTableModule, SharedModule, TooltipModule, MessagesModule, GrowlModule} from 'primeng/primeng';
 import { routing } from './app.routing';
+
 
 
 @NgModule({
@@ -24,6 +25,8 @@ import { routing } from './app.routing';
         DataTableModule,
         SharedModule,
         TooltipModule,
+        MessagesModule,
+        GrowlModule,
         routing
     ],
     declarations: [

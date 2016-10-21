@@ -50,7 +50,7 @@
         </div>
     </label>
     <label>
-        Experience: <input name="experience" [(ngModel)] = "employee.experience" #experience='ngModel' required pattern="[0-9 ]+" pTooltip="This field is required" tooltipPosition="right">
+        Experience: <input name="experience" [(ngModel)] = "employee.experience" #experience='ngModel' required pattern="[0-9]+" pTooltip="This field is required" tooltipPosition="right">
          <div *ngIf="experience.errors && (experience.dirty || experience.touched)">
             <div [hidden]="!experience.errors.pattern" class="error-msg">
               Experience is required and should consist of only a numbers
@@ -60,7 +60,8 @@
     <button type="submit" pButton label="Add" [disabled]="!f.valid"></button>
     </form>
 </div>
+<p-growl [value]="msgs"></p-growl>
 
-<button (click)="clickme()">lol</button>
+
 
 <a routerLink="/employees" pButton label="Back to list"></a>

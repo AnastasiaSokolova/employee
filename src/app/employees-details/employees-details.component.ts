@@ -4,6 +4,7 @@ import { EmployeesService } from '../shared/employees.service';
 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+import {Message} from 'primeng/primeng';
 
 @Component({
     selector: 'e-detail',
@@ -14,7 +15,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 export class EmployeesDetailsComponent implements OnInit {
     @Input() employee: Employees;
-    
+    msgs: Message[] = [];
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -27,7 +28,7 @@ export class EmployeesDetailsComponent implements OnInit {
         });
     }
     onSubmit(): void {
-        this.service.editEmployee(this.employee).then(res =>  this.router.navigateByUrl('/employees'));
+        this.service.editEmployee(this.employee).then(res =>  this.router.navigateByUrl('/employees'), error =>  this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'}));
     }
 }
  

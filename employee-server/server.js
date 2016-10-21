@@ -1,6 +1,7 @@
 var express = require('express');
-var bodyParser = require('body-parser')
-mongoose = require('mongoose');
+var bodyParser = require('body-parser'),
+    mongoose = require('mongoose');
+
 
 
 
@@ -15,7 +16,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -23,11 +23,8 @@ app.use(bodyParser.urlencoded({
 
 
 
-
 require('./models/employee');
 require('./routes')(app);
-
-
 
 app.listen(8000);
 console.log('Listening on port 8000...');

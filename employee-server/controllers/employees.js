@@ -1,6 +1,11 @@
 var mongoose = require('mongoose'),
 Employee = mongoose.model('Employee');
 
+exports.remove = function(req, res) {
+    Employee.remove({},function(err, result) {
+        return res.send(result);
+    });
+};
 
 
 exports.import = function(req, res){
@@ -166,7 +171,7 @@ exports.update = function(req, res) {
             });
 
         });
-}
+};
 
 exports.add = function(req, res) {
    var employee = new Employee(req.body);
