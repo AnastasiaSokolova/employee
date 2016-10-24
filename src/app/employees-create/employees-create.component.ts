@@ -4,7 +4,10 @@ import { EmployeesService } from '../shared/employees.service';
 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-import {Message} from 'primeng/primeng';
+import { Message } from 'primeng/primeng';
+
+import { EmployeeForm } from '../employee-form/employee-form.component';
+
 
 
 @Component({
@@ -26,7 +29,6 @@ export class EmployeesCreate {
           timestampMap: '1234567890', 
         });
         var token = TokenGenerator.generate();
-        console.log(token);
         return token;
     }
    

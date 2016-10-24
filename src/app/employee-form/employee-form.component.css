@@ -1,0 +1,47 @@
+form {
+	position: relative;
+	margin-left: 10px;
+}
+
+label {
+	position:relative;
+	width: 100%;
+	line-height: 24px;
+}
+
+input {
+	width: 100%;
+	padding: 5px;
+}
+
+button {
+	cursor: pointer;
+	position: absolute;
+    right: -14px;
+    bottom: -60px;
+}
+
+
+button {
+	border-radius: 0;
+	padding: 4px 9px;
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+input.ng-valid.ng-dirty {
+  border-left: 4px solid #42A948; 
+}
+
+.ng-invalid.ng-dirty:not(form)  {
+  border-left: 4px solid #a94442; 
+}
+
+.error-msg {
+    background: pink;
+    padding: 5px;
+    width: 496px;
+    color: crimson;
+    font-family: 'Lato', sans-serif;
+}

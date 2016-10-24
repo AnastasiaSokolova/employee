@@ -9,6 +9,8 @@ import { EmployeesStartPage } from './employees-startpage/employees-startpage.co
 import { EmployeesCreate } from './employees-create/employees-create.component';
 import { HttpModule } from '@angular/http';
 
+import { EmployeeForm } from './employee-form/employee-form.component';
+
 import { ButtonModule, InputTextModule, DataListModule, DataTableModule, SharedModule, TooltipModule, MessagesModule, GrowlModule} from 'primeng/primeng';
 import { routing } from './app.routing';
 
@@ -32,6 +34,7 @@ import { routing } from './app.routing';
     declarations: [
         AppComponent,
         EmployeesStartPage,
+        EmployeeForm,
         EmployeeListComponent,
         EmployeesDetailsComponent,
         EmployeesCreate
