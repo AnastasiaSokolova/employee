@@ -49,11 +49,11 @@ a, button {
 	text-transform: uppercase;
 }
 
-input.ng-valid {
+input.ng-valid.ng-dirty {
   border-left: 4px solid #42A948; 
 }
 
-.ng-invalid:not(form)  {
+.ng-invalid.ng-dirty:not(form)  {
   border-left: 4px solid #a94442; 
 }
 
