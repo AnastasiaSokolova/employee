@@ -139,34 +139,39 @@ exports.import = function(req, res){
 
 exports.findAll = function(req, res){
   Employee.find({},function(err, results) {
-    return res.send(results);
+      if(err) res.send(err);
+      return res.send(results);
   });
 };
 
 exports.findById = function(req, res){
   var id = req.params.id;
   Employee.findOne({'id':id},function(err, result) {
-    return res.send(result);
+      if(err) res.send(err);
+      return res.send(result);
   });
 };
 
 exports.delete = function(req, res){
     var id = req.params.id;
     Employee.remove({'id': id},function(err, result) {
+        if(err) res.send(err);
         return res.send({status: 200, msg: 'Success!'});
     });
 };
 
 exports.update = function(req, res) {
-    Employee.findOne({'id': req.params.id}, function(err, employee) {  
-            employee.firstname = req.body.firstname; 
+    Employee.findOne({'id': req.params.id}, function(err, employee) {
+            if(err) res.send(err);
+            employee.firstname = req.body.firstname;
             employee.lastname = req.body.lastname; 
             employee.age = req.body.age; 
             employee.position = req.body.position; 
             employee.skill = req.body.skill; 
             employee.language_level = req.body.language_level; 
-            employee.experience = req.body.experience; 
+            employee.experience = req.body.experience;
             employee.save(function(err) {
+                if(err) res.send(err);
                 res.send({ status: 200,  message: 'employee updated!' });
             });
 
@@ -176,6 +181,7 @@ exports.update = function(req, res) {
 exports.add = function(req, res) {
    var employee = new Employee(req.body);
    employee.save(function(err) {
+      if(err) res.send(err);
       res.json(employee);
     });
 };
