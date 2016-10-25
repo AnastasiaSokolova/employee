@@ -1,4 +1,4 @@
-<div *ngIf="employee" class="details">
+<div class="details">
     <p>Information about employee: <span>{{employee.firstname}}  {{employee.lastname}}</span></p>
     <form #f="ngForm" (ngSubmit)="onSubmit()"  autocomplete="off">
       <employee-form [employee]="employee"></employee-form>

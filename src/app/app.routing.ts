@@ -6,6 +6,8 @@ import { EmployeesDetailsComponent } from './employees-details/employees-details
 import { EmployeesStartPage } from './employees-startpage/employees-startpage.component';
 import { EmployeesCreate } from './employees-create/employees-create.component';
 
+import { EmployeesResolve } from './shared/employees-resolve.service';
+
 const appRoutes: Routes = [
     {
         path: 'employees',
@@ -18,6 +20,9 @@ const appRoutes: Routes = [
     },
     {
         path: 'details/:id',
+        resolve: {
+            employee: EmployeesResolve
+        },
         component: EmployeesDetailsComponent
     },
     {

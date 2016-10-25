@@ -14,7 +14,8 @@ import { EmployeeForm } from './employee-form/employee-form.component';
 import { ButtonModule, InputTextModule, DataListModule, DataTableModule, SharedModule, TooltipModule, MessagesModule, GrowlModule} from 'primeng/primeng';
 import { routing } from './app.routing';
 
-
+import { EmployeesResolve } from './shared/employees-resolve.service';
+import { EmployeesService } from './shared/employees.service';
 
 @NgModule({
     imports: [
@@ -40,6 +41,7 @@ import { routing } from './app.routing';
         EmployeesCreate
 
     ],
+    providers: [EmployeesResolve, EmployeesService],
     bootstrap: [ AppComponent ]
 })
 

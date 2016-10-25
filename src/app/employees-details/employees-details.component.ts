@@ -4,13 +4,14 @@ import { EmployeesService } from '../shared/employees.service';
 
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-import {Message} from 'primeng/primeng';
+import { Message } from 'primeng/primeng';
+import { EmployeesResolve } from '../shared/employees-resolve.service';
+
 
 @Component({
     selector: 'e-detail',
     templateUrl: './employees-details.component.html',
-    styleUrls: ['./employees-details.component.css'],
-    providers: [EmployeesService]
+    styleUrls: ['./employees-details.component.css']
 })
 
 export class EmployeesDetailsComponent implements OnInit {
@@ -22,9 +23,8 @@ export class EmployeesDetailsComponent implements OnInit {
         private service: EmployeesService) {}
     
     ngOnInit() {
-        this.route.params.forEach((params: Params) => {
-          let id = params['id']; 
-          this.service.getEmployee(id).then(employee => this.employee = employee);
+        this.route.data.forEach((data: { employee: Employees }) => {
+           this.employee = data.employee;
         });
     }
     onSubmit(): void {
