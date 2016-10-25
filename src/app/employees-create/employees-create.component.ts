@@ -34,7 +34,6 @@ export class EmployeesCreate {
    
 
 	constructor(
-        private route: ActivatedRoute,
         private router: Router,
         private service: EmployeesService) {}
     

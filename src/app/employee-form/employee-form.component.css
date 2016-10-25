@@ -14,21 +14,6 @@ input {
 	padding: 5px;
 }
 
-button {
-	cursor: pointer;
-	position: absolute;
-    right: -14px;
-    bottom: -60px;
-}
-
-
-button {
-	border-radius: 0;
-	padding: 4px 9px;
-	font-family: 'Lato', sans-serif;
-	font-size: 13px;
-	text-transform: uppercase;
-}
 
 input.ng-valid.ng-dirty {
   border-left: 4px solid #42A948; 

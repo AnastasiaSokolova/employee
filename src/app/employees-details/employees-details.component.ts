@@ -14,7 +14,7 @@ import {Message} from 'primeng/primeng';
 })
 
 export class EmployeesDetailsComponent implements OnInit {
-    @Input() employee: Employees;
+    employee: Employees;
     msgs: Message[] = [];
     constructor(
         private route: ActivatedRoute,
