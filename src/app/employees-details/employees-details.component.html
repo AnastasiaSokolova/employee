@@ -1,9 +1,6 @@
 <div class="details">
     <p>Information about employee: <span>{{employee.firstname}}  {{employee.lastname}}</span></p>
-    <form #f="ngForm" (ngSubmit)="onSubmit()"  autocomplete="off">
-      <employee-form [employee]="employee"></employee-form>
-      <button type="submit" pButton label="Edit" [disabled]="!f.valid"></button>
-    </form>
+    <employee-form [employee]="employee" (onSubmit)="onSubmit($event)"></employee-form>
 </div>
 
 <p-growl [value]="msgs"></p-growl>

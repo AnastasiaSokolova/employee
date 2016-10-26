@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 import { Employees } from '../shared/employees';
+
 
 @Component({
 	selector: 'employee-form',
@@ -10,5 +11,11 @@ import { Employees } from '../shared/employees';
 })
 
 export class EmployeeForm {
-	 @Input() employee: Employees;
+	@Input() employee: Employees;
+	@Output() onSubmit = new EventEmitter<>();
+
+
+	onSub(): void {
+      this.onSubmit.emit();
+    }
 }

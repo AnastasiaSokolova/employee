@@ -1,4 +1,4 @@
-
+<form #f="ngForm" (ngSubmit)="onSub()"  autocomplete="off">
     <label>
         First name: <input name="firstname"  [(ngModel)]="employee.firstname" #firstname='ngModel' required pattern="[a-zA-Z ]{3,16}" pTooltip="This field is required" tooltipPosition="right">
          <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)">
@@ -55,4 +55,5 @@
             </div>
         </div>
     </label>
- 
+   <button type="submit" pButton label="OK" [disabled]="!f.valid"></button>
+</form>
