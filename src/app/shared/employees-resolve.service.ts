@@ -12,7 +12,7 @@ export class EmployeesResolve implements Resolve<Employees> {
   constructor( private es: EmployeesService,
               private router: Router ) {}
 
-  resolve( route: ActivatedRouteSnapshot ): Promise<Employees>|boolean {
+  resolve( route: ActivatedRouteSnapshot ): Promise<boolean>|boolean {
     let id = route.params['id'];
     return this.es.getEmployee(id).then(res => {
       if (res) {
