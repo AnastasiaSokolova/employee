@@ -12,7 +12,7 @@ import { Employees } from '../shared/employees';
 
 export class EmployeeForm {
 	@Input() employee: Employees;
-	@Output() onSubmit = new EventEmitter<Employees>();
+	@Output() onSubmit = new EventEmitter();
 
 
 	onSub(): void {
